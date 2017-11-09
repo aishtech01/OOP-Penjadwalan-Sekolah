@@ -8,10 +8,6 @@ class Guru {
     protected $nohp;
     protected $mapel = array(); // Array Of Object Mapel
 
-    /**prote
-     * Set Nama
-     * @param String $nama Set Nama Guru
-     */
     public function setNama($nama) 
     {
         $this->nama = $nama;
