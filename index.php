@@ -41,43 +41,43 @@ $kelas_1->addSiswa($siswa_1);
 
 foreach ($siswa_1->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_1->getNis()  . "<br>";
-    echo "Nama : " . $siswa_1->getNama()  . "<br>";
-    echo "Email : " . $siswa_1->getEmail()  . "<br>";
-    echo "No. HP: " . $siswa_1->getNohp()  . "<br>";
-    echo "Kelas/Room : " . $kelas->getNama()  . "<br>";
-    echo "================================<br>";
+    echo "NIS : " . $siswa_1->getNis()  . "\n";
+    echo "Nama : " . $siswa_1->getNama()  . "\n";
+    echo "Email : " . $siswa_1->getEmail()  . "\n";
+    echo "No. HP: " . $siswa_1->getNohp()  . "\n";
+    echo "Kelas/Room : " . $kelas->getNama()  . "\n";
+    echo "================================\n";
 }
 
 foreach ($guru_1->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_1->getNip()  . "<br>";
-    echo "Nama : " . $guru_1->getNama()  . "<br>";
-    echo "Email : " . $guru_1->getEmail()  . "<br>";
-    echo "No. HP: " . $guru_1->getNohp()  . "<br>";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "<br>";
+    echo "NIP : " . $guru_1->getNip()  . "\n";
+    echo "Nama : " . $guru_1->getNama()  . "\n";
+    echo "Email : " . $guru_1->getEmail()  . "\n";
+    echo "No. HP: " . $guru_1->getNohp()  . "\n";
+    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n";
 }
 
 foreach ($mapel_1->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "<br>";
-    echo "Kelas/Room : " . $kelas->getNama()  . "<br>";
-    echo "================================<br>";
+    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
+    echo "Kelas/Room : " . $kelas->getNama()  . "\n";
+    echo "================================\n";
 
 }
-  echo "Hari : " . $jadwal_1->getHari()  . "<br>";
+  echo "Hari : " . $jadwal_1->getHari()  . "\n";
 
 foreach ($jadwal_1->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "<br>";
+      echo "Mapel : " . $mapel->getNama()  . "\n";
 }
 
 foreach ($jadwal_1->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "<br>";
+    echo "Guru : " . $guru->getNama()  . "\n";
 }
 
 foreach ($jadwal_1->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "<br>";
+    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
 }
 
 foreach ($kelas_1->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "<br>";
+    echo "Siswa : " . $siswa->getNama()  . "\n";
 }
