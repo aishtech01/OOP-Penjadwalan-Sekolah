@@ -7,10 +7,7 @@ class Siswa {
     protected $nohp;
     protected $kelas = array(); // Array Of Object Kelas
 
-    /**prote
-     * Set Nama
-     * @param String $nama Set Nama Siswa
-     */
+   
     public function setNama($nama) 
     {
         $this->nama = $nama;
