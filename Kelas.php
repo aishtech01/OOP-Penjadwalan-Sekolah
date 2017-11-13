@@ -20,6 +20,11 @@ Class Kelas {
         return $this->namakelas;
     }
 
+     public function getId() 
+    {
+        return $this->idkelas;
+    }
+
     public function getIdkelas() 
     {
         return $this->idkelas;
