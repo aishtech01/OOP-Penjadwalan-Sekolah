@@ -30,6 +30,11 @@ Class Mapel {
         return $this->nama;
     }
 
+    public function getId() 
+    {
+        return $this->idmapel  ;
+    }
+
     public function getGuru() 
     {
         return $this->guru;
