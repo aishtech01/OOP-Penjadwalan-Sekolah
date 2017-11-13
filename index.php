@@ -315,434 +315,292 @@ $kelas_8->addSiswa($siswa_8);
 $kelas_9->addSiswa($siswa_9);
 $kelas_10->addSiswa($siswa_10);
 
+echo "
+<form action='' method='post'>   
+<select name='guru'>  
+<option value=''>Pilih Guru</option>  
+<option value=".$guru_1->getNip().">". $guru_1->getNama()."</option>  
+<option value=".$guru_2->getNip().">". $guru_2->getNama()."</option>
+<option value=".$guru_3->getNip().">". $guru_3->getNama()."</option>  
+<option value=".$guru_4->getNip().">". $guru_4->getNama()."</option> 
+<option value=".$guru_5->getNip().">". $guru_5->getNama()."</option>  
+<option value=".$guru_6->getNip().">". $guru_6->getNama()."</option>  
+<option value=".$guru_7->getNip().">". $guru_7->getNama()."</option>  
+<option value=".$guru_8->getNip().">". $guru_8->getNama()."</option>   
+<option value=".$guru_9->getNip().">". $guru_9->getNama()."</option>  
+<option value=".$guru_10->getNip().">". $guru_10->getNama()."</option>  
+ </select>   
+ <select name='siswa'>  
+<option value=''>Pilih Siswa</option>  
+<option value=".$siswa_1->getNis().">". $siswa_1->getNama()."</option>  
+<option value=".$siswa_2->getNis().">". $siswa_2->getNama()."</option>
+<option value=".$siswa_3->getNis().">". $siswa_3->getNama()."</option>  
+<option value=".$siswa_4->getNis().">". $siswa_4->getNama()."</option> 
+<option value=".$siswa_5->getNis().">". $siswa_5->getNama()."</option>  
+<option value=".$siswa_6->getNis().">". $siswa_6->getNama()."</option>  
+<option value=".$siswa_7->getNis().">". $siswa_7->getNama()."</option>  
+<option value=".$siswa_8->getNis().">". $siswa_8->getNama()."</option>   
+<option value=".$siswa_9->getNis().">". $siswa_9->getNama()."</option>  
+<option value=".$siswa_10->getNis().">". $siswa_10->getNama()."</option>  
+ </select>   
+  <select name='siswa'>  
+<option value=''>Pilih Mata Pelajaran</option>  
+<option value=".$mapel_1->getId().">". $mapel_1->getNama()."</option>  
+<option value=".$mapel_2->getId().">". $mapel_2->getNama()."</option>
+<option value=".$mapel_3->getId().">". $mapel_3->getNama()."</option>  
+<option value=".$mapel_4->getId().">". $mapel_4->getNama()."</option> 
+<option value=".$mapel_5->getId().">". $mapel_5->getNama()."</option>  
+<option value=".$mapel_6->getId().">". $mapel_6->getNama()."</option>  
+<option value=".$mapel_7->getId().">". $mapel_7->getNama()."</option>  
+<option value=".$mapel_8->getId().">". $mapel_8->getNama()."</option>   
+<option value=".$mapel_9->getId().">". $mapel_9->getNama()."</option>  
+<option value=".$mapel_10->getId().">". $mapel_10->getNama()."</option>  
+ </select>  
+ <select name='kelas'>  
+<option value=''>Pilih Kelas</option>  
+<option value=".$kelas_1->getId().">". $kelas_1->getNama()."</option>  
+<option value=".$kelas_2->getId().">". $kelas_2->getNama()."</option>
+<option value=".$kelas_3->getId().">". $kelas_3->getNama()."</option>  
+<option value=".$kelas_4->getId().">". $kelas_4->getNama()."</option> 
+<option value=".$kelas_5->getId().">". $kelas_5->getNama()."</option>  
+<option value=".$kelas_6->getId().">". $kelas_6->getNama()."</option>  
+<option value=".$kelas_7->getId().">". $kelas_7->getNama()."</option>  
+<option value=".$kelas_8->getId().">". $kelas_8->getNama()."</option>   
+<option value=".$kelas_9->getId().">". $kelas_9->getNama()."</option>  
+<option value=".$kelas_10->getId().">". $kelas_10->getNama()."</option>  
+ </select>
+ <input type='submit' name='enter' value='Enter'>   
+ </form> 
 
-  echo "=======DAFTAR SISWA=======\n";
+<table border='1'>
+<tr><td colspan='5' align='center'>Daftar Siswa</td></tr>
+<tr><th>NIS</th><th>Nama Siswa</th><th>Email</th><th>No Hp</th><th>Kelas</th></tr>
+";
 foreach ($siswa_1->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_1->getNis()  . "\n";
-    echo "Nama : " . $siswa_1->getNama()  . "\n";
-    echo "Email : " . $siswa_1->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_1->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n";
-  
+echo "<tr><td>".$siswa_1->getNis()."</td><td>".$siswa_1->getNama()."</td><td>".$siswa_1->getEmail()."</td><td>".$siswa_1->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_2->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_2->getNis()  . "\n";
-    echo "Nama : " . $siswa_2->getNama()  . "\n";
-    echo "Email : " . $siswa_2->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_2->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
+echo "<tr><td>".$siswa_2->getNis()."</td><td>".$siswa_2->getNama()."</td><td>".$siswa_2->getEmail()."</td><td>".$siswa_2->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_3->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_3->getNis()  . "\n";
-    echo "Nama : " . $siswa_3->getNama()  . "\n";
-    echo "Email : " . $siswa_3->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_3->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
+echo "<tr><td>".$siswa_3->getNis()."</td><td>".$siswa_3->getNama()."</td><td>".$siswa_3->getEmail()."</td><td>".$siswa_3->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_4->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_4->getNis()  . "\n";
-    echo "Nama : " . $siswa_4->getNama()  . "\n";
-    echo "Email : " . $siswa_4->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_4->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+echo "<tr><td>".$siswa_4->getNis()."</td><td>".$siswa_4->getNama()."</td><td>".$siswa_4->getEmail()."</td><td>".$siswa_4->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_5->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_5->getNis()  . "\n";
-    echo "Nama : " . $siswa_5->getNama()  . "\n";
-    echo "Email : " . $siswa_5->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_5->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+echo "<tr><td>".$siswa_5->getNis()."</td><td>".$siswa_5->getNama()."</td><td>".$siswa_5->getEmail()."</td><td>".$siswa_5->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_6->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_6->getNis()  . "\n";
-    echo "Nama : " . $siswa_6->getNama()  . "\n";
-    echo "Email : " . $siswa_6->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_6->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+echo "<tr><td>".$siswa_6->getNis()."</td><td>".$siswa_6->getNama()."</td><td>".$siswa_6->getEmail()."</td><td>".$siswa_6->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_7->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_7->getNis()  . "\n";
-    echo "Nama : " . $siswa_7->getNama()  . "\n";
-    echo "Email : " . $siswa_7->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_7->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+echo "<tr><td>".$siswa_7->getNis()."</td><td>".$siswa_7->getNama()."</td><td>".$siswa_7->getEmail()."</td><td>".$siswa_7->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_8->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_8->getNis()  . "\n";
-    echo "Nama : " . $siswa_8->getNama()  . "\n";
-    echo "Email : " . $siswa_8->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_8->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+echo "<tr><td>".$siswa_8->getNis()."</td><td>".$siswa_8->getNama()."</td><td>".$siswa_8->getEmail()."</td><td>".$siswa_8->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_9->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_9->getNis()  . "\n";
-    echo "Nama : " . $siswa_9->getNama()  . "\n";
-    echo "Email : " . $siswa_9->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_9->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+echo "<tr><td>".$siswa_9->getNis()."</td><td>".$siswa_9->getNama()."</td><td>".$siswa_9->getEmail()."</td><td>".$siswa_9->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
 }
-
 foreach ($siswa_10->getKelas() as $kelas) 
 {
-    echo "NIS : " . $siswa_10->getNis()  . "\n";
-    echo "Nama : " . $siswa_10->getNama()  . "\n";
-    echo "Email : " . $siswa_10->getEmail()  . "\n";
-    echo "No. HP: " . $siswa_10->getNohp()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+echo "<tr><td>".$siswa_10->getNis()."</td><td>".$siswa_10->getNama()."</td><td>".$siswa_10->getEmail()."</td><td>".$siswa_10->getNohp()."<td>". $kelas->getNama()  ."</td></tr></table>";
 }
-
-  echo "======DAFTAR GURU=======\n";
+echo "<br><br>";
+echo "<table border='1'>
+<tr><td colspan='5' align='center'>Daftar Guru</td></tr>
+<tr><th>NIP</th><th>Nama Guru</th><th>Email</th><th>No Hp</th><th>Mapel</th></tr>
+";
 foreach ($guru_1->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_1->getNip()  . "\n";
-    echo "Nama : " . $guru_1->getNama()  . "\n";
-    echo "Email : " . $guru_1->getEmail()  . "\n";
-    echo "No. HP: " . $guru_1->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_1->getNip()."</td><td>".$guru_1->getNama()."</td><td>".$guru_1->getEmail()."</td><td>".$guru_1->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_2->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_2->getNip()  . "\n";
-    echo "Nama : " . $guru_2->getNama()  . "\n";
-    echo "Email : " . $guru_2->getEmail()  . "\n";
-    echo "No. HP: " . $guru_2->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_2->getNip()."</td><td>".$guru_2->getNama()."</td><td>".$guru_2->getEmail()."</td><td>".$guru_2->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_3->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_3->getNip()  . "\n";
-    echo "Nama : " . $guru_3->getNama()  . "\n";
-    echo "Email : " . $guru_3->getEmail()  . "\n";
-    echo "No. HP: " . $guru_3->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_3->getNip()."</td><td>".$guru_3->getNama()."</td><td>".$guru_3->getEmail()."</td><td>".$guru_3->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_4->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_4->getNip()  . "\n";
-    echo "Nama : " . $guru_4->getNama()  . "\n";
-    echo "Email : " . $guru_4->getEmail()  . "\n";
-    echo "No. HP: " . $guru_4->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_4->getNip()."</td><td>".$guru_4->getNama()."</td><td>".$guru_4->getEmail()."</td><td>".$guru_4->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_5->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_5->getNip()  . "\n";
-    echo "Nama : " . $guru_5->getNama()  . "\n";
-    echo "Email : " . $guru_5->getEmail()  . "\n";
-    echo "No. HP: " . $guru_5->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_5->getNip()."</td><td>".$guru_5->getNama()."</td><td>".$guru_5->getEmail()."</td><td>".$guru_5->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_6->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_6->getNip()  . "\n";
-    echo "Nama : " . $guru_6->getNama()  . "\n";
-    echo "Email : " . $guru_6->getEmail()  . "\n";
-    echo "No. HP: " . $guru_6->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_6->getNip()."</td><td>".$guru_6->getNama()."</td><td>".$guru_6->getEmail()."</td><td>".$guru_6->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_7->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_7->getNip()  . "\n";
-    echo "Nama : " . $guru_7->getNama()  . "\n";
-    echo "Email : " . $guru_7->getEmail()  . "\n";
-    echo "No. HP: " . $guru_7->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_7->getNip()."</td><td>".$guru_7->getNama()."</td><td>".$guru_7->getEmail()."</td><td>".$guru_7->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_8->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_8->getNip()  . "\n";
-    echo "Nama : " . $guru_8->getNama()  . "\n";
-    echo "Email : " . $guru_8->getEmail()  . "\n";
-    echo "No. HP: " . $guru_8->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_8->getNip()."</td><td>".$guru_8->getNama()."</td><td>".$guru_8->getEmail()."</td><td>".$guru_8->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_9->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_9->getNip()  . "\n";
-    echo "Nama : " . $guru_9->getNama()  . "\n";
-    echo "Email : " . $guru_9->getEmail()  . "\n";
-    echo "No. HP: " . $guru_9->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_9->getNip()."</td><td>".$guru_9->getNama()."</td><td>".$guru_9->getEmail()."</td><td>".$guru_9->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
 }
-
 foreach ($guru_10->getMapel() as $mapel) 
 {
-    echo "NIP : " . $guru_10->getNip()  . "\n";
-    echo "Nama : " . $guru_10->getNama()  . "\n";
-    echo "Email : " . $guru_10->getEmail()  . "\n";
-    echo "No. HP: " . $guru_10->getNohp()  . "\n";
-    echo "Mata Pelajaran : " . $mapel->getNama()  . "\n\n";
+echo "<tr><td>".$guru_10->getNip()."</td><td>".$guru_10->getNama()."</td><td>".$guru_10->getEmail()."</td><td>".$guru_10->getNohp()."<td>". $mapel->getNama()  ."</td></tr></table >";
 }
-
-echo "=======DAFTAR MAPEL======\n";
-foreach ($mapel_1->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+echo "<br><br><p>";
+echo "<table border='1'>
+<tr><td colspan='5' align='center'>Jadwal Pembelajaran</td></tr>
+<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_1->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_1->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-foreach ($mapel_2->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+foreach ($jadwal_1->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-foreach ($mapel_3->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+foreach ($jadwal_1->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-foreach ($mapel_4->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_2->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_2->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-foreach ($mapel_5->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+foreach ($jadwal_2->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-foreach ($mapel_6->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+foreach ($jadwal_2->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-foreach ($mapel_7->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_3->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_3->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-foreach ($mapel_8->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+foreach ($jadwal_3->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-foreach ($mapel_9->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+foreach ($jadwal_3->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-foreach ($mapel_10->getKelas() as $kelas) {
-    echo "Idkelas : " . $kelas->getIdkelas()  . "\n";
-    echo "Kelas/Room : " . $kelas->getNama()  . "\n\n";
-
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_4->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_4->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-  echo "Hari : " . $jadwal_1->getHari()  . "\n";
-
-foreach ($jadwal_1->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
+foreach ($jadwal_4->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-foreach ($jadwal_1->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
+foreach ($jadwal_4->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-foreach ($jadwal_1->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_5->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_5->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-foreach ($kelas_1->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
+foreach ($jadwal_5->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-  echo "Hari : " . $jadwal_2->getHari()  . "\n";
-
-foreach ($jadwal_2->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
+foreach ($jadwal_5->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-foreach ($jadwal_2->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_6->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_6->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-foreach ($jadwal_2->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
+foreach ($jadwal_6->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-foreach ($kelas_2->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
+foreach ($jadwal_6->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-  echo "Hari : " . $jadwal_3->getHari()  . "\n";
-
-foreach ($jadwal_3->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_7->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_7->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-foreach ($jadwal_3->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
+foreach ($jadwal_7->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-foreach ($jadwal_3->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
+foreach ($jadwal_7->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-foreach ($kelas_3->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_8->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_8->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-  echo "Hari : " . $jadwal_4->getHari()  . "\n";
-
-foreach ($jadwal_4->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
+foreach ($jadwal_8->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-foreach ($jadwal_4->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
+foreach ($jadwal_8->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-foreach ($jadwal_4->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_9->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_9->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-foreach ($kelas_4->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
+foreach ($jadwal_9->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-  echo "Hari : " . $jadwal_5->getHari()  . "\n";
-
-foreach ($jadwal_5->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
+foreach ($jadwal_9->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr>";
 }
-
-foreach ($jadwal_5->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
+"<tr><th>Waktu</th><th>Mata Pelajaran </th><th>Guru</th><th>Kelas</th></tr>
+";
+foreach ($jadwal_10->getMapel() as $mapel)
+{
+echo "<tr><td>". $jadwal_10->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
 }
-
-foreach ($jadwal_5->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
+foreach ($jadwal_10->getGuru() as $guru)
+{
+echo "<td>". $guru->getNama()  ."</td>";
 }
-
-foreach ($kelas_5->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
-}
-
-  echo "Hari : " . $jadwal_6->getHari()  . "\n";
-
-foreach ($jadwal_6->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
-}
-
-foreach ($jadwal_6->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
-}
-
-foreach ($jadwal_6->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
-}
-
-foreach ($kelas_6->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
-}
-
-  echo "Hari : " . $jadwal_7->getHari()  . "\n";
-
-foreach ($jadwal_7->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
-}
-
-foreach ($jadwal_7->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
-}
-
-foreach ($jadwal_7->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
-}
-
-foreach ($kelas_7->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
-}
-
-  echo "Hari : " . $jadwal_8->getHari()  . "\n";
-
-foreach ($jadwal_8->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
-}
-
-foreach ($jadwal_8->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
-}
-
-foreach ($jadwal_8->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
-}
-
-foreach ($kelas_8->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
-}
-
-  echo "Hari : " . $jadwal_9->getHari()  . "\n";
-
-foreach ($jadwal_9->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
-}
-
-foreach ($jadwal_9->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
-}
-
-foreach ($jadwal_9->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
-}
-
-foreach ($kelas_9->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n\n\n";
-}
-
-  echo "Hari : " . $jadwal_10->getHari()  . "\n";
-
-foreach ($jadwal_10->getMapel() as $mapel) {
-      echo "Mapel : " . $mapel->getNama()  . "\n";
-}
-
-foreach ($jadwal_10->getGuru() as $guru) {
-    echo "Guru : " . $guru->getNama()  . "\n";
-}
-
-foreach ($jadwal_10->getKelas() as $kelas) {
-    echo "Kelas/ Room : " . $kelas->getNama()  . "\n";
-}
-
-foreach ($kelas_10->getSiswa() as $siswa) {
-    echo "Siswa : " . $siswa->getNama()  . "\n";
+foreach ($jadwal_10->getKelas() as $kelas)
+{
+echo "<td>". $kelas->getNama()  ."</td></tr></table>";
 }
