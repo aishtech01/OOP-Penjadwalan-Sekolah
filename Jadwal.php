@@ -4,6 +4,7 @@ Class Jadwal {
     protected $mapel = array();
     protected $guru = array(); // Array Of Object Guru
     protected $kelas = array(); // Array Of Object Kelas
+    protected $siswa = array(); // Array Of Object Kelas
 
     public function setHari($hari) 
     {
@@ -25,6 +26,11 @@ Class Jadwal {
         array_push($this->kelas, $kelas);
     }
 
+     public function addSiswa($siswa)
+    {
+        array_push($this->siswa, $siswa);
+    }
+
     public function getHari() 
     {
         return $this->hari;
@@ -43,6 +49,12 @@ Class Jadwal {
     public function getKelas()
     {
         return $this->kelas;
+    }
+
+
+    public  function getSiswa()
+    {
+        return  $this->siswa;
     }
     
 
