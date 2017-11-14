@@ -304,6 +304,76 @@ $siswa_10->setEmail("tuti@ymail.com");
 $siswa_10->setNohp("0882222121");
 $siswa_10->addKelas($kelas_10);
 
+$siswa_11 = new Siswa();
+$siswa_11->setNama("Mina");
+$siswa_11->setNis("161710012");
+$siswa_11->setEmail("Mina@ymail.com");
+$siswa_11->setNohp("082387322121");
+$siswa_11->addKelas($kelas_1);
+
+$siswa_12 = new Siswa();
+$siswa_12->setNama("Deni");
+$siswa_12->setNis("161710011");
+$siswa_12->setEmail("deni@ymail.com");
+$siswa_12->setNohp("01928324874");
+$siswa_12->addKelas($kelas_1);
+
+$siswa_13 = new Siswa();
+$siswa_13->setNama("Dina");
+$siswa_13->setNis("161710010");
+$siswa_13->setEmail("dina@ymail.com");
+$siswa_13->setNohp("08238739811");
+$siswa_13->addKelas($kelas_1);
+
+$siswa_14 = new Siswa();
+$siswa_14->setNama("Fina");
+$siswa_14->setNis("16171009");
+$siswa_14->setEmail("fina@ymail.com");
+$siswa_14->setNohp("082387322121");
+$siswa_14->addKelas($kelas_1);
+
+$siswa_15 = new Siswa();
+$siswa_15->setNama("Adit");
+$siswa_15->setNis("161710005");
+$siswa_15->setEmail("adit@ymail.com");
+$siswa_15->setNohp("082387872321");
+$siswa_15->addKelas($kelas_2);
+
+$siswa_16 = new Siswa();
+$siswa_16->setNama("Egi");
+$siswa_16->setNis("161710023");
+$siswa_16->setEmail("egi@ymail.com");
+$siswa_16->setNohp("089387322121");
+$siswa_16->addKelas($kelas_2);
+
+$siswa_17 = new Siswa();
+$siswa_17->setNama("Lisna");
+$siswa_17->setNis("161710012");
+$siswa_17->setEmail("lisna@ymail.com");
+$siswa_17->setNohp("088292222121");
+$siswa_17->addKelas($kelas_2);
+
+$siswa_18 = new Siswa();
+$siswa_18->setNama("Putri Lestari");
+$siswa_18->setNis("151610012");
+$siswa_18->setEmail("putril@ymail.com");
+$siswa_18->setNohp("08318182121");
+$siswa_18->addKelas($kelas_2);
+
+$siswa_19 = new Siswa();
+$siswa_19->setNama("Fatimah");
+$siswa_19->setNis("151610012");
+$siswa_19->setEmail("siti@ymail.com");
+$siswa_19->setNohp("08823322121");
+$siswa_19->addKelas($kelas_2);
+
+$siswa_20 = new Siswa();
+$siswa_20->setNama("Tania");
+$siswa_20->setNis("151710012");
+$siswa_20->setEmail("tuti@ymail.com");
+$siswa_20->setNohp("0882222121");
+$siswa_20->addKelas($kelas_2);
+
 $kelas_1->addSiswa($siswa_1);
 $kelas_2->addSiswa($siswa_2);
 $kelas_3->addSiswa($siswa_3);
@@ -316,26 +386,108 @@ $kelas_9->addSiswa($siswa_9);
 $kelas_10->addSiswa($siswa_10);
 
 $jadwal_1->addSiswa($siswa_1);
+$jadwal_1->addSiswa($siswa_11);
+$jadwal_1->addSiswa($siswa_12);
+$jadwal_1->addSiswa($siswa_13);
+$jadwal_1->addSiswa($siswa_14);
 $jadwal_2->addSiswa($siswa_2);
-$jadwal_3->addSiswa($siswa_3);
-$jadwal_4->addSiswa($siswa_4);
-$jadwal_5->addSiswa($siswa_5);
-$jadwal_6->addSiswa($siswa_6);
-$jadwal_7->addSiswa($siswa_7);
-$jadwal_8->addSiswa($siswa_8);
-$jadwal_9->addSiswa($siswa_9);
-$jadwal_10->addSiswa($siswa_10);
+$jadwal_2->addSiswa($siswa_15);
+$jadwal_2->addSiswa($siswa_16);
+$jadwal_2->addSiswa($siswa_17);
+$jadwal_2->addSiswa($siswa_18);
+$guru_2->addSiswa($siswa_19);
+$guru_2->addSiswa($siswa_20);
+$guru_3->addSiswa($siswa_3);
+$guru_3->addSiswa($siswa_4);
+$guru_3->addSiswa($siswa_5);
+$guru_3->addSiswa($siswa_6);
+$guru_4->addSiswa($siswa_4);
+$guru_4->addSiswa($siswa_10);
+$guru_4->addSiswa($siswa_11);
+$guru_4->addSiswa($siswa_12);
+$guru_4->addSiswa($siswa_13);
+$guru_4->addSiswa($siswa_14);
+$guru_4->addSiswa($siswa_15);
+$guru_5->addSiswa($siswa_5);
+$guru_5->addSiswa($siswa_15);
+$guru_5->addSiswa($siswa_17);
+$guru_5->addSiswa($siswa_18);
+$guru_5->addSiswa($siswa_19);
+$guru_5->addSiswa($siswa_20);
+$guru_6->addSiswa($siswa_6);
+$guru_6->addSiswa($siswa_7);
+$guru_6->addSiswa($siswa_8);
+$guru_6->addSiswa($siswa_9);
+$guru_7->addSiswa($siswa_7);
+$guru_7->addSiswa($siswa_10);
+$guru_7->addSiswa($siswa_11);
+$guru_7->addSiswa($siswa_12);
+$guru_8->addSiswa($siswa_8);
+$guru_8->addSiswa($siswa_13);
+$guru_8->addSiswa($siswa_14);
+$guru_8->addSiswa($siswa_15);
+$guru_8->addSiswa($siswa_16);
+$guru_9->addSiswa($siswa_9);
+$guru_9->addSiswa($siswa_17);
+$guru_9->addSiswa($siswa_18);
+$guru_9->addSiswa($siswa_19);
+$guru_10->addSiswa($siswa_10);
+$guru_10->addSiswa($siswa_20);
+$guru_10->addSiswa($siswa_3);
+$guru_10->addSiswa($siswa_4);
+$guru_10->addSiswa($siswa_5);
 
 $guru_1->addSiswa($siswa_1);
+$guru_1->addSiswa($siswa_11);
+$guru_1->addSiswa($siswa_12);
+$guru_1->addSiswa($siswa_13);
+$guru_1->addSiswa($siswa_14);
 $guru_2->addSiswa($siswa_2);
+$guru_2->addSiswa($siswa_15);
+$guru_2->addSiswa($siswa_16);
+$guru_2->addSiswa($siswa_17);
+$guru_2->addSiswa($siswa_18);
+$guru_2->addSiswa($siswa_19);
+$guru_2->addSiswa($siswa_20);
 $guru_3->addSiswa($siswa_3);
+$guru_3->addSiswa($siswa_4);
+$guru_3->addSiswa($siswa_5);
+$guru_3->addSiswa($siswa_6);
 $guru_4->addSiswa($siswa_4);
+$guru_4->addSiswa($siswa_10);
+$guru_4->addSiswa($siswa_11);
+$guru_4->addSiswa($siswa_12);
+$guru_4->addSiswa($siswa_13);
+$guru_4->addSiswa($siswa_14);
+$guru_4->addSiswa($siswa_15);
 $guru_5->addSiswa($siswa_5);
+$guru_5->addSiswa($siswa_15);
+$guru_5->addSiswa($siswa_17);
+$guru_5->addSiswa($siswa_18);
+$guru_5->addSiswa($siswa_19);
+$guru_5->addSiswa($siswa_20);
 $guru_6->addSiswa($siswa_6);
+$guru_6->addSiswa($siswa_7);
+$guru_6->addSiswa($siswa_8);
+$guru_6->addSiswa($siswa_9);
 $guru_7->addSiswa($siswa_7);
+$guru_7->addSiswa($siswa_10);
+$guru_7->addSiswa($siswa_11);
+$guru_7->addSiswa($siswa_12);
 $guru_8->addSiswa($siswa_8);
+$guru_8->addSiswa($siswa_13);
+$guru_8->addSiswa($siswa_14);
+$guru_8->addSiswa($siswa_15);
+$guru_8->addSiswa($siswa_16);
 $guru_9->addSiswa($siswa_9);
+$guru_9->addSiswa($siswa_17);
+$guru_9->addSiswa($siswa_18);
+$guru_9->addSiswa($siswa_19);
 $guru_10->addSiswa($siswa_10);
+$guru_10->addSiswa($siswa_20);
+$guru_10->addSiswa($siswa_3);
+$guru_10->addSiswa($siswa_4);
+$guru_10->addSiswa($siswa_5);
 
 $guru_1->addKelas($kelas_1);
 $guru_2->addKelas($kelas_2);
@@ -360,7 +512,15 @@ $guru_9->addJadwal($jadwal_9);
 $guru_10->addJadwal($jadwal_10);
 
 $siswa_1->addGuru($guru_1);
+$siswa_1->addGuru($guru_2);
+$siswa_1->addGuru($guru_3);
+$siswa_1->addGuru($guru_4);
+
 $siswa_2->addGuru($guru_2);
+$siswa_2->addGuru($guru_3);
+$siswa_2->addGuru($guru_9);
+$siswa_2->addGuru($guru_10);
+
 $siswa_3->addGuru($guru_3);
 $siswa_4->addGuru($guru_4);
 $siswa_5->addGuru($guru_5);
@@ -382,6 +542,13 @@ $siswa_9->addJadwal($jadwal_9);
 $siswa_10->addJadwal($jadwal_10);
 
 $siswa_1->addMapel($mapel_1);
+$siswa_1->addMapel($mapel_2);
+$siswa_1->addMapel($mapel_3);
+$siswa_1->addMapel($mapel_4);
+
+$siswa_2->addMapel($mapel_3);
+$siswa_2->addMapel($mapel_9);
+$siswa_2->addMapel($mapel_10);
 $siswa_2->addMapel($mapel_2);
 $siswa_3->addMapel($mapel_3);
 $siswa_4->addMapel($mapel_4);
@@ -399,6 +566,7 @@ $siswa_10->addMapel($mapel_10);
   Pilih Guru :
 <select id="guru" name="guru" onChange='this.form.submit()'>
 <?php $guru = $_GET['guru']; ?>
+<option value="">Pilih Guru</option>
 <option value="guru_1" <?php if (!empty($guru) && $guru == 'guru_1')  echo 'selected = "selected"'; ?>><?php echo $guru_1->getNama() ?></option>
 <option value="guru_2" <?php if (!empty($guru) && $guru == 'guru_2')  echo 'selected = "selected"'; ?>><?php echo $guru_2->getNama() ?></option>
 <option value="guru_3" <?php if (!empty($guru) && $guru == 'guru_3')  echo 'selected = "selected"'; ?>><?php echo $guru_3->getNama() ?></option>
@@ -414,10 +582,34 @@ $siswa_10->addMapel($mapel_10);
 </form>
 </td>
 <td>
+ 
+</td>
+<td>
  <form method=GET action="index.php">
+  Pilih Waktu :
+<select id="jadwal" name="jadwal" onChange='this.form.submit()'>
+<?php $jadwal = $_GET['jadwal']; ?>
+<option value="">Pilih Waktu</option>
+<option value="jadwal_1" <?php if (!empty($jadwal) && $jadwal == 'jadwal_1')  echo 'selected = "selected"'; ?>><?php echo $jadwal_1->getHari() ?></option>
+<option value="jadwal_2" <?php if (!empty($jadwal) && $jadwal == 'jadwal_2')  echo 'selected = "selected"'; ?>><?php echo $jadwal_2->getHari() ?></option>
+<option value="jadwal_3" <?php if (!empty($jadwal) && $jadwal == 'jadwal_3')  echo 'selected = "selected"'; ?>><?php echo $jadwal_3->getHari() ?></option>
+<option value="jadwal_4" <?php if (!empty($jadwal) && $jadwal == 'jadwal_4')  echo 'selected = "selected"'; ?>><?php echo $jadwal_4->getHari() ?></option>
+<option value="jadwal_5" <?php if (!empty($jadwal) && $jadwal == 'jadwal_5')  echo 'selected = "selected"'; ?>><?php echo $jadwal_5->getHari() ?></option>
+<option value="jadwal_6" <?php if (!empty($jadwal) && $jadwal == 'jadwal_6')  echo 'selected = "selected"'; ?>><?php echo $jadwal_6->getHari() ?></option>
+<option value="jadwal_7" <?php if (!empty($jadwal) && $jadwal == 'jadwal_7')  echo 'selected = "selected"'; ?>><?php echo $jadwal_7->getHari() ?></option>
+<option value="jadwal_8" <?php if (!empty($jadwal) && $jadwal == 'jadwal_8')  echo 'selected = "selected"'; ?>><?php echo $jadwal_8->getHari() ?></option>
+<option value="jadwal_9" <?php if (!empty($jadwal) && $jadwal == 'jadwal_9')  echo 'selected = "selected"'; ?>><?php echo $jadwal_9->getHari() ?></option>
+<option value="jadwal_10" <?php if (!empty($jadwal) && $jadwal == 'jadwal_10')  echo 'selected = "selected"'; ?>><?php echo $jadwal_10->getHari() ?></option>
+</select>
+</form>
+
+</td>
+<td>
+    <form method=GET action="index.php">
   Pilih Siswa :
 <select id="siswa" name="siswa" onChange='this.form.submit()'>
 <?php $siswa = $_GET['siswa']; ?>
+<option value=""> Pilih Siswa</option>
 <option value="siswa_1" <?php if (!empty($siswa) && $siswa == 'siswa_1')  echo 'selected = "selected"'; ?>><?php echo $siswa_1->getNama() ?></option>
 <option value="siswa_2" <?php if (!empty($siswa) && $siswa == 'siswa_2')  echo 'selected = "selected"'; ?>><?php echo $siswa_2->getNama() ?></option>
 <option value="siswa_3" <?php if (!empty($siswa) && $siswa == 'siswa_3')  echo 'selected = "selected"'; ?>><?php echo $siswa_3->getNama() ?></option>
@@ -431,32 +623,14 @@ $siswa_10->addMapel($mapel_10);
 </select>
 </form>
 </td>
-<td>
- <form method=GET action="index.php">
-  Pilih Guru :
-<select id="jadwal" name="jadwal" onChange='this.form.submit()'>
-<?php $jadwal = $_GET['jadwal']; ?>
-<option value="jadwal_1" <?php if (!empty($jadwal) && $jadwal == 'jadwal_1')  echo 'selected = "selected"'; ?>><?php echo $jadwal_1->getHari() ?></option>
-<option value="jadwal_2" <?php if (!empty($jadwal) && $jadwal == 'jadwal_2')  echo 'selected = "selected"'; ?>><?php echo $jadwal_2->getHari() ?></option>
-<option value="jadwal_3" <?php if (!empty($jadwal) && $jadwal == 'jadwal_3')  echo 'selected = "selected"'; ?>><?php echo $jadwal_3->getHari() ?></option>
-<option value="jadwal_4" <?php if (!empty($jadwal) && $jadwal == 'jadwal_4')  echo 'selected = "selected"'; ?>><?php echo $jadwal_4->getHari() ?></option>
-<option value="jadwal_5" <?php if (!empty($jadwal) && $jadwal == 'jadwal_5')  echo 'selected = "selected"'; ?>><?php echo $jadwal_5->getHari() ?></option>
-<option value="jadwal_6" <?php if (!empty($jadwal) && $jadwal == 'jadwal_6')  echo 'selected = "selected"'; ?>><?php echo $jadwal_6->getHari() ?></option>
-<option value="jadwal_7" <?php if (!empty($jadwal) && $jadwal == 'jadwal_7')  echo 'selected = "selected"'; ?>><?php echo $jadwal_7->getHari() ?></option>
-<option value="jadwal_8" <?php if (!empty($jadwal) && $jadwal == 'jadwal_8')  echo 'selected = "selected"'; ?>><?php echo $jadwal_8->getHari() ?></option>
-<option value="jadwal_9" <?php if (!empty($jadwal) && $jadwal == 'jadwal_9')  echo 'selected = "selected"'; ?>><?php echo $jadwal_9->getHari() ?></option>
-<option value="jadwal_10" <?php if (!empty($jadwal) && $jadwal == 'jadwal_10')  echo 'selected = "selected"'; ?>><?php echo $jadwal_10->getHari() ?></option>
-</select>
-</form>
-</td>
 </tr>
 </table>
-                 <table border='1'><tr><td colspan='5' align='center'>Penjadwalan</td></tr>
-                 <tr><th>Mapel</th><th>Nama Guru</th><th>Kelas</th><th>Jadwal</th><th>Siswa</th></tr> 
+                
         <?php
                 if (isset( $_GET['jadwal']) )
                 {
-                
+                echo " <table border='1'><tr><td colspan='5' align='center'>Penjadwalan</td></tr>
+                 <tr><th>Mapel</th><th>Nama Guru</th><th>Kelas</th><th>Jadwal</th></tr> ";
                  foreach (${$_GET['jadwal']}->getMapel() as $mapel)
                 {
                 echo "<tr><td>". $mapel->getNama()  ."</td>";
@@ -468,17 +642,21 @@ $siswa_10->addMapel($mapel_10);
                 }
                foreach (${$_GET['jadwal']}->getKelas() as $kelas)
                 {
-                echo "<td>". $kelas->getNama()  ."</td> <td>". ${$_GET['jadwal']}->getHari()  ."</td>";
+                echo "<td>". $kelas->getNama()  ."</td> <td>". ${$_GET['jadwal']}->getHari()  ."</td></tr><tr><th colspan='4'>Data Siswa</th></tr>";
                 } 
                 foreach (${$_GET['jadwal']}->getSiswa() as $siswa)
                 {
-                echo "<td>". $siswa->getNama()  ."</td></tr>";
+                echo "<tr><td colspan='4'>". $siswa->getNama()  ."</td></tr>";
                 } 
+                echo "</table>";
                 }
+              
 
                 else if (isset($_GET['guru']))
                 {
-                 
+               
+                 echo " <table border='1'><tr><td colspan='5' align='center'>Penjadwalan</td></tr>
+                 <tr><th>Mapel</th><th>Nama Guru</th><th>Kelas</th><th>Jadwal</th></tr> ";  
                 foreach (${$_GET['guru']}->getMapel() as $mapel)
                 {
                 echo "<tr><td>". $mapel->getNama()  ."</td><td>". ${$_GET['guru']}->getNama()."</td>";
@@ -491,39 +669,34 @@ $siswa_10->addMapel($mapel_10);
 
                 foreach (${$_GET['guru']}->getJadwal() as $jadwal)
                 {
-                echo "<td>". $jadwal->getHari()  ."</td>";
-                }
+                echo "<td>". $jadwal->getHari()  ."</td></td></tr><tr><th colspan='4'>Data Siswa</th></tr>";
+           }
                 foreach (${$_GET['guru']}->getSiswa() as $siswa)
                 {
-                echo "<td>". $siswa->getNama()  ."</td></tr>";
+                echo "<tr><td colspan='4'>". $siswa->getNama()  ."</td></tr>";
                 }
+                echo "</table>";
                 }
-
+              
                 else if (isset($_GET['siswa']))
                 {
-                 
-                foreach (${$_GET['siswa']}->getMapel() as $mapel)
-                {
-                echo "<tr><td>". $mapel->getNama() ."</td>";
-                }
-
-                foreach (${$_GET['siswa']}->getGuru() as $guru)
-                {
-                echo "<td>". $guru->getNama()  ."</td>";
-                } 
-
+                echo "<table border='1'><tr><td colspan='5' align='center'>Siswa</td></tr>
+                 <tr><th>Nama Siswa</th><th>Kelas</th></tr>";
 
                 foreach (${$_GET['siswa']}->getKelas() as $kelas)
                 {
-                echo "<td>". $kelas->getNama()  ."</td>";
+                echo "<tr><td>". ${$_GET['siswa']}->getNama()."</td><td>". $kelas->getNama()  ."</td></tr><tr><th colspan='2'>Data Mapel</th></tr>";
                 } 
 
-                foreach (${$_GET['siswa']}->getJadwal() as $jadwal)
+                foreach (${$_GET['siswa']}->getMapel() as $mapel)
                 {
-                echo "<td>". $jadwal->getHari()  ."</td><td>". ${$_GET['siswa']}->getNama()."</td>";
+                echo "<tr><td colspan='2'>". $mapel->getNama() ."</td></tr>";
                 }
+                echo "<tr><th colspan='2'>Guru</th></tr>";
+                foreach (${$_GET['siswa']}->getGuru() as $guru)
+                {
+                echo "<tr><td colspan='2'>". $guru->getNama() ."</td></tr>";
+                }
+                echo "</table>";
                 
-                }
-            
-        ?>
-    
+              }
