@@ -223,7 +223,7 @@ $jadwal_8->addGuru($guru_8);
 $jadwal_8->addKelas($kelas_8);
 $jadwal_8->addMapel($mapel_8);
 $jadwal_9 = new Jadwal();
-$jadwal_9->setHari("Jumat, 10.00 - 12.00");
+$jadwal_9->setHari("Jumat, 08.00 - 10.00");
 $jadwal_9->addGuru($guru_9);
 $jadwal_9->addKelas($kelas_9);
 $jadwal_9->addMapel($mapel_9);
@@ -314,118 +314,216 @@ $kelas_7->addSiswa($siswa_7);
 $kelas_8->addSiswa($siswa_8);
 $kelas_9->addSiswa($siswa_9);
 $kelas_10->addSiswa($siswa_10);
+
+$jadwal_1->addSiswa($siswa_1);
+$jadwal_2->addSiswa($siswa_2);
+$jadwal_3->addSiswa($siswa_3);
+$jadwal_4->addSiswa($siswa_4);
+$jadwal_5->addSiswa($siswa_5);
+$jadwal_6->addSiswa($siswa_6);
+$jadwal_7->addSiswa($siswa_7);
+$jadwal_8->addSiswa($siswa_8);
+$jadwal_9->addSiswa($siswa_9);
+$jadwal_10->addSiswa($siswa_10);
+
+$guru_1->addSiswa($siswa_1);
+$guru_2->addSiswa($siswa_2);
+$guru_3->addSiswa($siswa_3);
+$guru_4->addSiswa($siswa_4);
+$guru_5->addSiswa($siswa_5);
+$guru_6->addSiswa($siswa_6);
+$guru_7->addSiswa($siswa_7);
+$guru_8->addSiswa($siswa_8);
+$guru_9->addSiswa($siswa_9);
+$guru_10->addSiswa($siswa_10);
+
+$guru_1->addKelas($kelas_1);
+$guru_2->addKelas($kelas_2);
+$guru_3->addKelas($kelas_3);
+$guru_4->addKelas($kelas_4);
+$guru_5->addKelas($kelas_5);
+$guru_6->addKelas($kelas_6);
+$guru_7->addKelas($kelas_7);
+$guru_8->addKelas($kelas_8);
+$guru_9->addKelas($kelas_9);
+$guru_10->addKelas($kelas_10);
+
+$guru_1->addJadwal($jadwal_1);
+$guru_2->addJadwal($jadwal_2);
+$guru_3->addJadwal($jadwal_3);
+$guru_4->addJadwal($jadwal_4);
+$guru_5->addJadwal($jadwal_5);
+$guru_6->addJadwal($jadwal_6);
+$guru_7->addJadwal($jadwal_7);
+$guru_8->addJadwal($jadwal_8);
+$guru_9->addJadwal($jadwal_9);
+$guru_10->addJadwal($jadwal_10);
+
+$siswa_1->addGuru($guru_1);
+$siswa_2->addGuru($guru_2);
+$siswa_3->addGuru($guru_3);
+$siswa_4->addGuru($guru_4);
+$siswa_5->addGuru($guru_5);
+$siswa_6->addGuru($guru_6);
+$siswa_7->addGuru($guru_7);
+$siswa_8->addGuru($guru_8);
+$siswa_9->addGuru($guru_9);
+$siswa_10->addGuru($guru_10);
+
+$siswa_1->addJadwal($jadwal_1);
+$siswa_2->addJadwal($jadwal_2);
+$siswa_3->addJadwal($jadwal_3);
+$siswa_4->addJadwal($jadwal_4);
+$siswa_5->addJadwal($jadwal_5);
+$siswa_6->addJadwal($jadwal_6);
+$siswa_7->addJadwal($jadwal_7);
+$siswa_8->addJadwal($jadwal_8);
+$siswa_9->addJadwal($jadwal_9);
+$siswa_10->addJadwal($jadwal_10);
+
+$siswa_1->addMapel($mapel_1);
+$siswa_2->addMapel($mapel_2);
+$siswa_3->addMapel($mapel_3);
+$siswa_4->addMapel($mapel_4);
+$siswa_5->addMapel($mapel_5);
+$siswa_6->addMapel($mapel_6);
+$siswa_7->addMapel($mapel_7);
+$siswa_8->addMapel($mapel_8);
+$siswa_9->addMapel($mapel_9);
+$siswa_10->addMapel($mapel_10);
+
 ?>
-<form method=GET action="index.php">
-                Pilih Guru :
-                <select name="guru" onChange='this.form.submit()'>
-                        <?php
-                                        echo "<option value =''></option>";
-                                        echo "<option value='guru_1'>".$guru_1->getNama()."</option>";
-                                        echo "<option value='guru_2'>".$guru_2->getNama()."</option>";
-                                        echo "<option value='guru_3'>".$guru_3->getNama()."</option>";
-                                        echo "<option value='guru_4'>".$guru_4->getNama()."</option>";
-                                        echo "<option value='guru_5'>".$guru_5->getNama()."</option>";
-                                        echo "<option value='guru_6'>".$guru_6->getNama()."</option>";
-                                        echo "<option value='guru_7'>".$guru_7->getNama()."</option>";
-                                        echo "<option value='guru_8'>".$guru_8->getNama()."</option>";
-                                        echo "<option value='guru_9'>".$guru_9->getNama()."</option>";
-                                        echo "<option value='guru_10'>".$guru_10->getNama()."</option>";
-                              
-                        ?>
-                </select>
-        </form>
+<table border=" 0"><tr>
+<td>
+ <form method=GET action="index.php">
+  Pilih Guru :
+<select id="guru" name="guru" onChange='this.form.submit()'>
+<?php $guru = $_GET['guru']; ?>
+<option value="guru_1" <?php if (!empty($guru) && $guru == 'guru_1')  echo 'selected = "selected"'; ?>><?php echo $guru_1->getNama() ?></option>
+<option value="guru_2" <?php if (!empty($guru) && $guru == 'guru_2')  echo 'selected = "selected"'; ?>><?php echo $guru_2->getNama() ?></option>
+<option value="guru_3" <?php if (!empty($guru) && $guru == 'guru_3')  echo 'selected = "selected"'; ?>><?php echo $guru_3->getNama() ?></option>
+<option value="guru_4" <?php if (!empty($guru) && $guru == 'guru_4')  echo 'selected = "selected"'; ?>><?php echo $guru_4->getNama() ?></option>
+<option value="guru_5" <?php if (!empty($guru) && $guru == 'guru_5')  echo 'selected = "selected"'; ?>><?php echo $guru_5->getNama() ?></option>
+<option value="guru_6" <?php if (!empty($guru) && $guru == 'guru_6')  echo 'selected = "selected"'; ?>><?php echo $guru_6->getNama() ?></option>
+<option value="guru_7" <?php if (!empty($guru) && $guru == 'guru_7')  echo 'selected = "selected"'; ?>><?php echo $guru_7->getNama() ?></option>
+<option value="guru_8" <?php if (!empty($guru) && $guru == 'guru_8')  echo 'selected = "selected"'; ?>><?php echo $guru_8->getNama() ?></option>
+<option value="guru_9" <?php if (!empty($guru) && $guru == 'guru_9')  echo 'selected = "selected"'; ?>><?php echo $guru_9->getNama() ?></option>
+<option value="guru_10" <?php if (!empty($guru) && $guru == 'guru_10')  echo 'selected = "selected"'; ?>><?php echo $guru_10->getNama() ?></option>
 
-                 <table border='1'><tr><td colspan='5' align='center'>Data Guru</td></tr><tr><th>NIP</th><th>Nama Guru</th><th>Email</th><th>No Hp</th><th>Mapel</th></tr> 
+</select>
+</form>
+</td>
+<td>
+ <form method=GET action="index.php">
+  Pilih Siswa :
+<select id="siswa" name="siswa" onChange='this.form.submit()'>
+<?php $siswa = $_GET['siswa']; ?>
+<option value="siswa_1" <?php if (!empty($siswa) && $siswa == 'siswa_1')  echo 'selected = "selected"'; ?>><?php echo $siswa_1->getNama() ?></option>
+<option value="siswa_2" <?php if (!empty($siswa) && $siswa == 'siswa_2')  echo 'selected = "selected"'; ?>><?php echo $siswa_2->getNama() ?></option>
+<option value="siswa_3" <?php if (!empty($siswa) && $siswa == 'siswa_3')  echo 'selected = "selected"'; ?>><?php echo $siswa_3->getNama() ?></option>
+<option value="siswa_4" <?php if (!empty($siswa) && $siswa == 'siswa_4')  echo 'selected = "selected"'; ?>><?php echo $siswa_4->getNama() ?></option>
+<option value="siswa_5" <?php if (!empty($siswa) && $siswa == 'siswa_5')  echo 'selected = "selected"'; ?>><?php echo $siswa_5->getNama() ?></option>
+<option value="siswa_6" <?php if (!empty($siswa) && $siswa == 'siswa_6')  echo 'selected = "selected"'; ?>><?php echo $siswa_6->getNama() ?></option>
+<option value="siswa_7" <?php if (!empty($siswa) && $siswa == 'siswa_7')  echo 'selected = "selected"'; ?>><?php echo $siswa_7->getNama() ?></option>
+<option value="siswa_8" <?php if (!empty($siswa) && $siswa == 'siswa_8')  echo 'selected = "selected"'; ?>><?php echo $siswa_8->getNama() ?></option>
+<option value="siswa_9" <?php if (!empty($siswa) && $siswa == 'siswa_9')  echo 'selected = "selected"'; ?>><?php echo $siswa_9->getNama() ?></option>
+<option value="siswa_10" <?php if (!empty($siswa) && $siswa == 'siswa_10')  echo 'selected = "selected"'; ?>><?php echo $siswa_10->getNama() ?></option>
+</select>
+</form>
+</td>
+<td>
+ <form method=GET action="index.php">
+  Pilih Guru :
+<select id="jadwal" name="jadwal" onChange='this.form.submit()'>
+<?php $jadwal = $_GET['jadwal']; ?>
+<option value="jadwal_1" <?php if (!empty($jadwal) && $jadwal == 'jadwal_1')  echo 'selected = "selected"'; ?>><?php echo $jadwal_1->getHari() ?></option>
+<option value="jadwal_2" <?php if (!empty($jadwal) && $jadwal == 'jadwal_2')  echo 'selected = "selected"'; ?>><?php echo $jadwal_2->getHari() ?></option>
+<option value="jadwal_3" <?php if (!empty($jadwal) && $jadwal == 'jadwal_3')  echo 'selected = "selected"'; ?>><?php echo $jadwal_3->getHari() ?></option>
+<option value="jadwal_4" <?php if (!empty($jadwal) && $jadwal == 'jadwal_4')  echo 'selected = "selected"'; ?>><?php echo $jadwal_4->getHari() ?></option>
+<option value="jadwal_5" <?php if (!empty($jadwal) && $jadwal == 'jadwal_5')  echo 'selected = "selected"'; ?>><?php echo $jadwal_5->getHari() ?></option>
+<option value="jadwal_6" <?php if (!empty($jadwal) && $jadwal == 'jadwal_6')  echo 'selected = "selected"'; ?>><?php echo $jadwal_6->getHari() ?></option>
+<option value="jadwal_7" <?php if (!empty($jadwal) && $jadwal == 'jadwal_7')  echo 'selected = "selected"'; ?>><?php echo $jadwal_7->getHari() ?></option>
+<option value="jadwal_8" <?php if (!empty($jadwal) && $jadwal == 'jadwal_8')  echo 'selected = "selected"'; ?>><?php echo $jadwal_8->getHari() ?></option>
+<option value="jadwal_9" <?php if (!empty($jadwal) && $jadwal == 'jadwal_9')  echo 'selected = "selected"'; ?>><?php echo $jadwal_9->getHari() ?></option>
+<option value="jadwal_10" <?php if (!empty($jadwal) && $jadwal == 'jadwal_10')  echo 'selected = "selected"'; ?>><?php echo $jadwal_10->getHari() ?></option>
+</select>
+</form>
+</td>
+</tr>
+</table>
+                 <table border='1'><tr><td colspan='5' align='center'>Penjadwalan</td></tr>
+                 <tr><th>Mapel</th><th>Nama Guru</th><th>Kelas</th><th>Jadwal</th><th>Siswa</th></tr> 
         <?php
-                if (isset($_GET['guru']))
+                if (isset( $_GET['jadwal']) )
                 {
-                    
-                 foreach (${$_GET['guru']}->getMapel() as $mapel) 
-                 {
-                 echo "<tr><td>".${$_GET['guru']}->getNip()."</td><td>".${$_GET['guru']}->getNama()."</td><td>".${$_GET['guru']}->getEmail()."</td><td>".${$_GET['guru']}->getNohp()."<td>". $mapel->getNama()  ."</td></tr>";
-                 } 
-                }
-        ?>
-        </table>
-<br>
-<br>
-        <form method=GET action="index.php">
-                Pilih Siswa :
-                <select name="siswa" onChange='this.form.submit()'>
-                        <?php
-                                        echo "<option value =''></option>";
-                                        echo "<option value='siswa_1'>".$siswa_1->getNama()."</option>";
-                                        echo "<option value='siswa_2'>".$siswa_2->getNama()."</option>";
-                                        echo "<option value='siswa_3'>".$siswa_3->getNama()."</option>";
-                                        echo "<option value='siswa_4'>".$siswa_4->getNama()."</option>";
-                                        echo "<option value='siswa_5'>".$siswa_5->getNama()."</option>";
-                                        echo "<option value='siswa_6'>".$siswa_6->getNama()."</option>";
-                                        echo "<option value='siswa_7'>".$siswa_7->getNama()."</option>";
-                                        echo "<option value='siswa_8'>".$siswa_8->getNama()."</option>";
-                                        echo "<option value='siswa_9'>".$siswa_9->getNama()."</option>";
-                                        echo "<option value='siswa_10'>".$siswa_10->getNama()."</option>";
-                              
-                        ?>
-                </select>
-        </form>
-        <table border='1'><tr><td colspan='5' align='center'>Data Guru</td></tr>
-                       <tr><th>NIS</th><th>Nama Siswa</th><th>Email</th><th>No Hp</th><th>Kelas</th></tr>
-        <?php
-                if (isset($_GET['siswa']))
+                
+                 foreach (${$_GET['jadwal']}->getMapel() as $mapel)
                 {
-                  
-                 foreach (${$_GET['siswa']}->getKelas() as $kelas) 
-                 {
-                 echo "<tr><td>".${$_GET['siswa']}->getNis()."</td><td>".${$_GET['siswa']}->getNama()."</td><td>".${$_GET['siswa']}->getEmail()."</td><td>".${$_GET['siswa']}->getNohp()."<td>". $kelas->getNama()  ."</td></tr>";
-                 } 
+                echo "<tr><td>". $mapel->getNama()  ."</td>";
                 }
-        ?>
-        </table>
-         <br>
-        <br>
-         <br>
-        <br>
-        <form method=GET action="index.php">
-                Pilih Waktu :
-                <select name="jadwal" onChange='this.form.submit()'>
-                        <?php
-                                        echo "<option value =''></option>";
-                                        echo "<option value='jadwal_1'>".$jadwal_1->getHari()."</option>";
-                                        echo "<option value='jadwal_2'>".$jadwal_2->getHari()."</option>";
-                                        echo "<option value='jadwal_3'>".$jadwal_3->getHari()."</option>";
-                                        echo "<option value='jadwal_4'>".$jadwal_4->getHari()."</option>";
-                                        echo "<option value='jadwal_5'>".$jadwal_5->getHari()."</option>";
-                                        echo "<option value='jadwal_6'>".$jadwal_6->getHari()."</option>";
-                                        echo "<option value='jadwal_7'>".$jadwal_7->getHari()."</option>";
-                                        echo "<option value='jadwal_8'>".$jadwal_8->getHari()."</option>";
-                                        echo "<option value='jadwal_9'>".$jadwal_9->getHari()."</option>";
-                                        echo "<option value='jadwal_10'>".$jadwal_10->getHari()."</option>";
-                              
-                        ?>
-                </select>
-        </form>
 
-        <table border='1'><tr><td colspan='5' align='center'>Jadwal</td></tr>
-                       <tr><th>Waktu</th><th>Mapel</th><th>Guru</th><th>Kelas</th></tr>
-                <?php
-                if (isset($_GET['jadwal']))
-                {
-
-                foreach (${$_GET['jadwal']}->getMapel() as $mapel)
-                {
-                echo "<tr><td>". ${$_GET['jadwal']}->getHari()  ."</td><td>". $mapel->getNama()  ."</td>";
-                }
                 foreach (${$_GET['jadwal']}->getGuru() as $guru)
                 {
                 echo "<td>". $guru->getNama()  ."</td>";
                 }
-                foreach (${$_GET['jadwal']}->getKelas() as $kelas)
+               foreach (${$_GET['jadwal']}->getKelas() as $kelas)
                 {
-                echo "<td>". $kelas->getNama()  ."</td></tr> ";
-                }   
-            
+                echo "<td>". $kelas->getNama()  ."</td> <td>". ${$_GET['jadwal']}->getHari()  ."</td>";
+                } 
+                foreach (${$_GET['jadwal']}->getSiswa() as $siswa)
+                {
+                echo "<td>". $siswa->getNama()  ."</td></tr>";
+                } 
                 }
-                ?>
-        </table>
-<br>
-<a href="semua.php">Semua Data</a>
+
+                else if (isset($_GET['guru']))
+                {
+                 
+                foreach (${$_GET['guru']}->getMapel() as $mapel)
+                {
+                echo "<tr><td>". $mapel->getNama()  ."</td><td>". ${$_GET['guru']}->getNama()."</td>";
+                }
+
+                foreach (${$_GET['guru']}->getKelas() as $kelas)
+                {
+                echo "<td>". $kelas->getNama()  ."</td>";
+                } 
+
+                foreach (${$_GET['guru']}->getJadwal() as $jadwal)
+                {
+                echo "<td>". $jadwal->getHari()  ."</td>";
+                }
+                foreach (${$_GET['guru']}->getSiswa() as $siswa)
+                {
+                echo "<td>". $siswa->getNama()  ."</td></tr>";
+                }
+                }
+
+                else if (isset($_GET['siswa']))
+                {
+                 
+                foreach (${$_GET['siswa']}->getMapel() as $mapel)
+                {
+                echo "<tr><td>". $mapel->getNama() ."</td>";
+                }
+
+                foreach (${$_GET['siswa']}->getGuru() as $guru)
+                {
+                echo "<td>". $guru->getNama()  ."</td>";
+                } 
+
+
+                foreach (${$_GET['siswa']}->getKelas() as $kelas)
+                {
+                echo "<td>". $kelas->getNama()  ."</td>";
+                } 
+
+                foreach (${$_GET['siswa']}->getJadwal() as $jadwal)
+                {
+                echo "<td>". $jadwal->getHari()  ."</td><td>". ${$_GET['siswa']}->getNama()."</td>";
+                }
+                
+                }
+            
+        ?>
+    
